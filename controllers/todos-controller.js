@@ -33,6 +33,7 @@ todosController.create = (req, res) => {
     title: req.body.title,
     category: req.body.category,
     info: req.body.info,
+    status: req.body.status,
   }).then(() => {
     res.redirect('/todos');
   }).catch(err => {
@@ -46,6 +47,7 @@ todosController.update = (req, res) =>{
     title: req.body.title,
     category: req.body.category,
     info: req.body.info,
+    status: req.body.status,
   }, req.params.id).then(movie => {
     res.redirect(`/todos/${req.params.id}`);
   }).catch(err => {
