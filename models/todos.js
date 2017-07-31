@@ -12,13 +12,13 @@ Todos.findById = (id) => {
 `, [id]);
 }
 
-Todos.create = (todos) => {
+Todos.create = (todos, userid) => {
   return db.one(`
     INSERT INTO todos
-    (title, category, info, status)
-    VALUES ($1, $2, $3, $4)
+    (title, category, info, status, user_id)
+    VALUES ($1, $2, $3, $4, $5)
     RETURNING *
-`, [todos.title, todos.category, todos.info, todos.status]);
+`, [todos.title, todos.category, todos.info, todos.status, userid]);
 }
 
 Todos.update = (todos, id) => {
@@ -40,13 +40,5 @@ Todos.destroy = (id) => {
 `, [id]);
 }
 
-Todos.create = (todos, userid) => {
-  return db.one(`
-    INSERT INTO movies
-    (title, category, info, status, user_id)
-    VALUES ($1, $2, $3, $4, $5)
-    RETURNING *
-  `, [todos.title, todos.category, todos.info, todos.status, userid]);
-}
 
 module.exports = Todos;
