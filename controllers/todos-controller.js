@@ -78,16 +78,3 @@ todosController.delete = (req, res) => {
 }
 
 module.exports = todosController;
-
-
-
-
-
-
-
-
-
-
-
-
-
