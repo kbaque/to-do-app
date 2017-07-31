@@ -41,13 +41,3 @@ Todos.destroy = (id) => {
 }
 
 module.exports = Todos;
-
-
-
-
-
-
-
-
-
-
