@@ -9,5 +9,5 @@ CREATE TABLE IF NOT EXISTS users (
   lastname VARCHAR(255)
 );
 
-ALTER TABLE movies
+ALTER TABLE todos
 ADD COLUMN user_id INTEGER REFERENCES users(id);
