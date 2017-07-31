@@ -1,0 +1,25 @@
+<% include ../partials/boilerplate %>
+
+<div class='all'>
+</div>
+
+
+  <div class='todos-container'>
+    <div class='todos'>
+      <h2><%= data.title %></h2>
+      <h3><%= data.category %></h3>
+      <h3><%= data.info %></h3>
+      <h4><%= data.status %></h4>
+      <div class='links'>
+        <a href='/todos/<%= data.id %>/edit'>Edit it!</a>
+        <form method='POST' action='/todos/<%= data.id %>?_method=DELETE'>
+          <input type='submit' value='Delete it!' />
+        </form>
+      </div>
+      </div>
+      <div class='linkback'>
+        <a class='seeall' href='/todos/'>View All</a>
+      </div>
+    </div>
+
+<% include ../partials/end %>

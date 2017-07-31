@@ -1,0 +1,11 @@
+<% include ../partials/boilerplate %>
+
+<form method='POST' action='/todos/<%= data.id %>?_method=PUT'>
+  <input name='title' type='text' value='<%= data.title %>' />
+  <input name='category' type='text' value='<%= data.category %>' />
+  <input name='info' type='text' value='<%= data.info %>' />
+  <input name='status' type='text' value='<%= data.status %>' />
+  <input type='submit' value='Edit it!' />
+</form>
+
+<% include ../partials/end %>
