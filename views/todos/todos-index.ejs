@@ -13,7 +13,7 @@
         <h4><%= todos.status %></h4>
         <div class='links'>
           <a class='linkto' href='/todos/<%= todos.id%>'>View All</a>
-          <form method='POST' action='/todos/<%= movie.id %>?_method=DELETE'>
+          <form method='POST' action='/todos/<%= todos.id %>?_method=DELETE'>
             <input type='submit' value='Delete it!' />
           </form>
         </div>

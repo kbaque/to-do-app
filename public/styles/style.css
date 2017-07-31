@@ -3,3 +3,7 @@ input[type=password],
 input[type=number],
 input[type="reset"],
 input[type="button"],
+
+body{
+   background-color: pink;
+}
