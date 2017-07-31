@@ -34,7 +34,7 @@ todosController.create = (req, res) => {
     category: req.body.category,
     info: req.body.info,
     status: req.body.status,
-  }).then(() => {
+   }, req.user.id).then(() => {
     res.redirect('/todos');
   }).catch(err => {
     console.log(err);

@@ -40,4 +40,13 @@ Todos.destroy = (id) => {
 `, [id]);
 }
 
+Todos.create = (todos, userid) => {
+  return db.one(`
+    INSERT INTO movies
+    (title, category, info, status, user_id)
+    VALUES ($1, $2, $3, $4, $5)
+    RETURNING *
+  `, [todos.title, todos.category, todos.info, todos.status, userid]);
+}
+
 module.exports = Todos;

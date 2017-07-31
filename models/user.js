@@ -18,4 +18,10 @@ User.create = user => {
   `, [user.username, user.email, user.password_digest, user.firstname, user.lastname]);
 };
 
+User.findUserTodos = id => {
+  return db.manyOrNone(`
+    SELECT * FROM todos
+    WHERE user_id = $1
+  `, [id]);
+};
 module.exports = User;
