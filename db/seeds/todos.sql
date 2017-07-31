@@ -2,7 +2,7 @@ INSERT INTO todos (title, category, info, status) VALUES
 (
  'Go for a walk',
  'Health',
- 'walk 1 mile',
+ 'walk one mile',
  'Done'
 ),
 (
@@ -12,8 +12,8 @@ INSERT INTO todos (title, category, info, status) VALUES
   'Done'
 ),
 (
-  'Start project'
-  'Homework'
+  'Start project',
+  'Homework',
   'must be done before next monday',
   'Pending'
 );
